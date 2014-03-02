@@ -1,0 +1,31 @@
+#!/bin/sh
+
+
+#
+
+# network Bring up/down networking
+
+#
+
+# description: Starts and stops minecraft server
+
+#
+ 
+
+
+MC_DIR_NAME="MinecraftServerTest"
+
+if ps ax | grep -v grep | grep minecraft_server.1.7.2.jar > /dev/null
+
+then
+   
+	echo "MC svr already running"
+
+else
+   
+	echo ${MC_DIR_NAME} 
+	cd ${MC_DIR_NAME}/ 
+   
+	screen -dmS mcSvr  java -Xmx512M -Xms512M -jar minecraft_server.1.7.2.jar nogui
+
+fi
