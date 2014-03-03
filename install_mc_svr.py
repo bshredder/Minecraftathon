@@ -15,10 +15,10 @@ import os, sys
 class Minecraft_Installer:
 
 
-CONST_DIR_NAME=""MinecraftServerTest"
-"
+CONST_DIR_NAME="MinecraftServerTest"
+
 CONST_LOGFILE_NAME="install_mc_log"
-CONST_DOWNLOAD_URL="https://s3.amazonaws.com/Minecraft.Download/versions/1.7.2/minecraft_server.1.6.4.jar"
+CONST_DOWNLOAD_URL="https://s3.amazonaws.com/Minecraft.Download/versions/1.7.2/minecraft_server.1.7.2.jar"
 
 
 
