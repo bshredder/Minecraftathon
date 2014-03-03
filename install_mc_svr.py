@@ -15,6 +15,12 @@ import os, sys
 class Minecraft_Installer:
 
 
+CONST_DIR_NAME=""MinecraftServerTest"
+"
+CONST_LOGFILE_NAME="install_mc_log"
+CONST_DOWNLOAD_URL="https://s3.amazonaws.com/Minecraft.Download/versions/1.7.2/minecraft_server.1.6.4.jar"
+
+
 
 	#
 	# constructor
@@ -22,11 +28,9 @@ class Minecraft_Installer:
 
 	def __init__(self):
         	self.outFile = None
-		self.mc_dirName = "MinecraftServerTest"
-
-
-		self.mc_logFileName = "install_mc_log"
-		self.mc_svr_url = "https://s3.amazonaws.com/Minecraft.Download/versions/1.6.4/minecraft_server.1.6.4.jar"
+		self.mc_dirName = CONST_DIR_NAME
+		self.mc_logFileName = CONST_LOGFILE_NAME
+		self.mc_svr_url = CONST_DOWNLOAD_URL
 
 
 	#
