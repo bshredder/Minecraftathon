@@ -1,11 +1,5 @@
 #!/usr/local/bin/python
 
-# TODO list
-#
-# launch screen - independent shell program
-# send email on status
-#
-
 
 #
 # required python libraries
@@ -20,7 +14,8 @@ import os, sys, time
 
 class Minecraft_AutoStarter:
 
-
+CONST_START_CMD="sudo java -Xmx512M -Xms512M -jar minecraft_server.1.7.2.jar nogui"
+CONST_LOG_NAME="mc_start_log"
 
 	#
 	# constructor
@@ -28,8 +23,8 @@ class Minecraft_AutoStarter:
 
 	def __init__(self):
 
-		self.mc_logFileName = "mc_start_log"
-		self.mc_start_cmd = "sudo java -Xmx512M -Xms512M -jar minecraft_server.1.6.4.jar nogui"
+		self.mc_logFileName=CONST_LOG_NAME
+		self.mc_start_cmd=CONST_START_CMD
 
 
 	#
@@ -85,6 +80,6 @@ class Minecraft_AutoStarter:
 mc_starter = Minecraft_AutoStarter() 
 
 mc_starter.init( "mc_start_log" )
-mc_starter.start( "sudo java -Xmx512M -Xms512M -jar minecraft_server.1.6.4.jar nogui" )
+mc_starter.start( "sudo java -Xmx512M -Xms512M -jar /home/ec2-user/MinecraftServerTest/minecraft_server.1.7.2.jar nogui" )
 mc_starter.deinit()
 
